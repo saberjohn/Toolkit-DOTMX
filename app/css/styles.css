@@ -77,7 +77,7 @@ input, button, select, textarea {
 .pattern { position:fixed; width:100%; background:url(../img/pattern.png) repeat; top:0; display:block; height:100%; z-index:-180;}
  
 /* ######## 3 - Header ######  */ 
-.header { background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:78px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
+.header {position:fixed;top:0;left:0;right:0;width:100%; background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:78px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
 .logo { padding:7px 0 0; float:left; }
  
 .navi { width:360px; float:right; padding:24px 0; }
