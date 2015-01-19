@@ -20,29 +20,6 @@ $(function() {
 });
  
 
-/*--------- Subscriber Fixed nav -------*/
- 
-$(document).ready(function() {
-    var s = $(".sub-wrap");
-    var pos = s.position();                   
-    $(window).scroll(function() {
-        var windowpos = $(window).scrollTop();
-        
-        if (windowpos >= pos.top) {
-            s.addClass("stick");
-$("#subscriber").addClass("suby", "0");			 
-$(".main-content").addClass("suby2");			 
-$(".scroll-top").fadeIn("300");			 
- 		 
-        } else {
-            s.removeClass("stick");
-			$("#subscriber").removeClass("suby", "0");
-			 $(".main-content").removeClass("suby2");			 
-$(".scroll-top").fadeOut("300");			 
-
-        }
-    });
-});
 
 
 /*--------- Features Hover  -------*/
