@@ -72,15 +72,15 @@ input, button, select, textarea {
 
 /* ######## 2 - General Styles ######  */ 
  
-.wrapper { width:940px; margin:auto; }
+.wrapper { width:940px; margin:auto; position:relative;}
 .clear { clear:both; }
 .pattern { position:fixed; width:100%; background:url(../img/pattern.png) repeat; top:0; display:block; height:100%; z-index:-180;}
  
 /* ######## 3 - Header ######  */ 
-.header {position:fixed;top:0;left:0;right:0;width:100%; background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:78px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
-.logo { padding:7px 0 0; float:left; }
+.header {z-index:99999;position:fixed;top:0;left:0;right:0;width:100%; background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:68px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
+.logo { padding:0; float:left; }
  
-.navi { width:360px; float:right; padding:24px 0; }
+.navi { width:360px; float:right; padding:16px 0; }
 .navi ul { float:right; }
 .navi li  { font-size:14px; line-height:2.4; font-weight:400;  text-shadow:1px 1px 1px rgba(0,0,0,0.2); float:left; margin:0 0 0 35px;}
 .navi li   {opacity:0.6;}
@@ -90,7 +90,7 @@ input, button, select, textarea {
  
 /* ######## 4 - Main Content ######  */ 
 .suby2 { padding:70px 0 112px!important; }
-.main-content { padding:70px 0 40px; text-align:center; }
+.main-content { padding:70px 0 0px;height:100vh; text-align:center;position:relative; }
 .main-content h3 { font-weight:300; font-size:32px; color:#fff; text-shadow:1px 1px 2px rgba(0,0,0,0.5),1px 1px 4px rgba(0,0,0,0.2); }
 .main-content h3 strong { font-weight:600; }
 .main-content p.subtitles { padding:32px 0 0; font-size:14px; font-weight:400; color:#fff; text-shadow:1px 1px 2px rgba(0,0,0,0.5); }
