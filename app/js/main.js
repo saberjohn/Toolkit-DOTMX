@@ -1,6 +1,3 @@
-/*---------  Backstretch -------*/
-
-
 
 /*---------  Video Hover and Popup -------*/
 

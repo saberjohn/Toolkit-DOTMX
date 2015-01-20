@@ -150,8 +150,7 @@ color:#9c9c9c; font-size:11px;   }
 .featu-hover h6 { color:#4e4e4e; }
 .featu-hover p { color:#848484; }
 .featu-hover .step p { border:1px solid rgba(0,0,0,0.2); color:#fff; box-shadow:0 0 2px rgba(255,255,255,0.1),0 15px 8px rgba(255,255,255,0.1)inset; }
-.title h3:before { background: none repeat scroll 0 0 rgba(0, 0, 0, 0.09); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.98);    content: "";   height: 1px;      margin-top: 14px;    float:left;    width: 15%; }
-.title h3:after {  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.09); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.98);    content: "";    height: 1px;    margin-top: 14px;    float:right;    width: 15%; }
+
 	
 /* ######## 7 - Tabbed Content  ######  */ 
 
@@ -400,8 +399,7 @@ input.email-newsletter {   width:180px ;   }
 .tabs-text2 p { font-size:13px; }
 .tabs-text2 p.subtitles { font-size:16px; }
 .extras { height:255px; }
-.title h3:after { width:10%; }
-.title h3:before { width:10%; }
+
 .buttons .bt1 { display:none; } 
 .buttons p { display:none; } 
 .cta { height:320px; }
@@ -423,8 +421,7 @@ input.email-newsletter {   width:200px ;   }
 .newsletter-form form { width:360px; margin:0 auto; }
 .contain{padding:200px 0 0 0;}
 .title h3 { font-size:18px!important; }
-.title h3:after { width:0%; }
-.title h3:before { width:0%; }
+
 .features { height:430px; }
 .featu p { font-size:11px; }
 .featu h6 { font-size:13px; }
@@ -476,8 +473,7 @@ input.email-newsletter {   width:140px ;   }
 .newsletter-form form { width:300px; margin:0 auto; }
 .newsletter-form { padding:20px 0; }
 .title h3 { font-size:14px!important; }
-.title h3:after { width:2%; }
-.title h3:before { width:2%; }
+
 .features { height:910px; }
  
 .featu { width:auto; margin:25px 0 0; }
