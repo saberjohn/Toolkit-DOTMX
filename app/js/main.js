@@ -1,8 +1,6 @@
 /*---------  Backstretch -------*/
 
-$(function() {
-$.backstretch("img/background.png");
-});
+
 
 /*---------  Video Hover and Popup -------*/
 
