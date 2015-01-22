@@ -77,10 +77,11 @@ input, button, select, textarea {
 .pattern { position:fixed; width:100%; background:url(../img/pattern.png) repeat; top:0; display:block; height:100%; z-index:-180;}
  
 /* ######## 3 - Header ######  */ 
-.header {z-index:99999;position:fixed;top:0;left:0;right:0;width:100%; background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:68px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
+.header {z-index:99999;position:fixed;top:0;left:0;right:0;width:100%; background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:55px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
 .logo { padding:0; float:left; }
+.logo img { width:158px !important;height:auto;}
  
-.navi { width:auto; float:right; padding:16px 0; }
+.navi { width:auto; float:right; padding:11px 0; }
 .navi ul { float:right; }
 .navi li  { font-size:14px; line-height:2.4; font-weight:400;  text-shadow:1px 1px 1px rgba(0,0,0,1); float:left; margin:0 10px;}
 .navi li a {padding:10px;-webkit-transition: all 0.25s linear;-moz-transition: all 0.25s linear;-o-transition: all 0.25s linear;transition: all 0.25s linear;}
@@ -173,7 +174,7 @@ margin:35px 0 0; height:275px;  display:block; margin:15px 0 0; padding:60px 0; 
 .tabs-text { width:40%; float:left; }
 .tabs-text a { float:left;  border-radius:5px; box-shadow:0px 0px 2px rgba(255,255,255,0.5)inset; width:90px; height:17px; padding:3px 0 10px; text-align:center; font-size:13px; line-height:1.8; margin:20px 0 0; }
 .tabs-text h6 {  font-size:30px; font-weight:600; color:#222424;   }
-.tabs-text p  {  font-size:15px; font-weight:300; color:#7c7c7c; padding:10px 0 0; line-height:2.3;  }
+.tabs-text p  {  font-size:15px; font-weight:300; color:#7c7c7c; padding:10px 0 0; line-height:2;  }
 .tabs-text p.subtitles {  font-size:18px; font-weight:300; padding:20px 0 0; color:#b2b2b2;  }
 
 .tabs-img { width:48%; float:right; }

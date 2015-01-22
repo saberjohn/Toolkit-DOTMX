@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     top: 0px;
+    padding:0;
     left: 0px;
     z-index: 0;
     list-style: none;
@@ -12,10 +13,10 @@
     text-shadow:1px 1px 1px #000;
     background:#000;
 }
-/*.cb-slideshow:after { 
+.cb-slideshow:after { 
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left; 
-}*/
+    background-color:rgba(0,0,0,0.55);
+}
 .cb-slideshow li span { 
     width: 100%;
     height: 100%;
