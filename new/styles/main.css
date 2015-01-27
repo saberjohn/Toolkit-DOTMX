@@ -168,3 +168,5 @@
 .dark{
     opacity: 1 !important;
 }
+#mapa { position: relative;height: 100vh;}
+#map-box { position: absolute;top: 0;bottom: 0;width: 100%;}

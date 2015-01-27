@@ -15,7 +15,7 @@
 }
 .cb-slideshow:after { 
     content: '';
-    background-color:rgba(0,0,0,0.55);
+    background: transparent url('../assets/pattern_vertical.png') repeat top left;
 }
 .cb-slideshow li span { 
     width: 100%;
