@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+		<link href='http://api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.css' rel='stylesheet' />
 		<!-- endbuild -->
 </head>
   <body ng-app="dotmxApp">
@@ -49,9 +50,11 @@
 	<!-- endbuild -->
 
 	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src='http://api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.js'></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/main.js"></script>
 	<script src="scripts/directives/dotHeader.js"></script>
+	<script src="js/init.js"></script>
 	<!-- endbuild -->
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 	 <script>

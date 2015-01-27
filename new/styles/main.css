@@ -15,6 +15,9 @@
 .navbar-header a img{
     margin:3px 0;
 }
+.navbar-header a {
+	text-transform: uppercase;
+}
 .nav>li.active>a{
     color:#47c9af;
     font-weight: normal !important;
