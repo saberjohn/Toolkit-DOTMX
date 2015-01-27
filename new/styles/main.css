@@ -15,9 +15,6 @@
 .navbar-header a img{
     margin:3px 0;
 }
-.navbar-header a {
-	text-transform: uppercase;
-}
 .nav>li.active>a{
     color:#47c9af;
     font-weight: normal !important;
@@ -173,3 +170,7 @@
 }
 #mapa { position: relative;height: 100vh;}
 #map-box { position: absolute;top: 0;bottom: 0;width: 100%;}
+
+.navbar-nav > li > a{
+	text-transform: uppercase;
+}
