@@ -19,6 +19,9 @@ angular.module('dotmxApp')
 	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26').setView([19.044918668412617, -98.20747375488281], 13);
 	var circleLayer = new L.LayerGroup();
 	
+	//Sidebar
+	var sidebar = L.control.sidebar('sidebar').addTo(map);
+	
 	var geojsonMarkerOptions = {
 		radius: 10,
 		fillColor: "#47c9af",
@@ -53,12 +56,19 @@ angular.module('dotmxApp')
 			circleLayer.clearLayers();
 			var circle = L.circle([layer._latlng.lat, layer._latlng.lng], 800, geojsonMarkerOptions2);
 			
+			//prueba
 			var contenthtml = "<p>";
 				contenthtml += "Nombre: " + feature.properties.Name + "<br/>";
 				contenthtml += "Sum_PerR_1: " + feature.properties.Sum_PerR_1 + "<br/>";
 				contenthtml += "PobDesocup: " + feature.properties.PobDesocup + "<br/>";
 				contenthtml += "DensPobAvg: " + feature.properties.DensPobAvg + "<br/>";
 			contenthtml += "</p>";
+			
+			//datos - falta meter labels correctos de las propiedades
+			$("#info-Name").html(feature.properties.Name);
+			$("#info-Sum_PerR_1").html(feature.properties.Sum_PerR_1);
+			$("#info-PobDesocup").html(feature.properties.PobDesocup);
+			$("#info-DensPobAvg").html(feature.properties.DensPobAvg);
 			
 			circleLayer.addLayer(circle);
 			circleLayer.addTo(map);
@@ -68,7 +78,15 @@ angular.module('dotmxApp')
 			
 			$(".leaflet-popup-close-button").click( function() {
 				circleLayer.clearLayers();
+				sidebar.close();
 			});
+			
+			sidebar.open("home");
 		});
 	}
+	
+	map.on('click', function(e) {
+		circleLayer.clearLayers();
+		sidebar.close();
+	});
   });

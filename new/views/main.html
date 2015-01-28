@@ -145,6 +145,28 @@
 <section class="map" id="map">
     <div class="container">
         <div id="mapa">
+			<div id="sidebar" class="sidebar collapsed">
+				<!-- Nav tabs -->
+				<ul class="sidebar-tabs" role="tablist">
+					<li><a href="#home" role="tab" id="home-tab"><i class="fa fa-bars"></i></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="sidebar-content active">
+					<div class="sidebar-pane" id="home">
+						<h3>Información Poblacional</h3>
+						<p>
+							<ul>
+								<li>Nombre: <span id="info-Name"></span></li>
+								<li>Sum_PerR_1: <span id="info-Sum_PerR_1"></span></li>
+								<li>PobDesocup: <span id="info-PobDesocup"></span></li>
+								<li>DensPobAvg: <span id="info-DensPobAvg"></span></li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+			
             <div id="map-box"></div>
         </div>
     </div>
