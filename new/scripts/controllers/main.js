@@ -81,8 +81,8 @@ angular.module('dotmxApp')
 				sidebar.close();
 			});
 			
-			sidebar.open("home");
 			map.panTo(new L.LatLng(layer._latlng.lat, layer._latlng.lng));
+			sidebar.open("home");
 		});
 	}
 	
