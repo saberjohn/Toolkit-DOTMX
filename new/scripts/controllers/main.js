@@ -35,9 +35,6 @@ angular.module('dotmxApp')
 	}).addTo(map);
 	
 	function onEachFeature(feature, layer) {
-		//console.log(layer);
-		//var sMarker = L.circleMarker([layer._latlng.lat, layer._latlng.lng], geojsonMarkerOptions).addTo(map);
-		
 		layer.on('click', function(e) {
 			layer.bindPopup("Código postal: " + feature.properties.Name).openPopup();
 		});
