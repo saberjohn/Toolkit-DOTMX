@@ -32,13 +32,13 @@ angular.module('dotmxApp')
 	
 	var geojsonMarkerOptions2 = {
 		radius: 30,
-		fillColor: "#47c9af",
+		fillColor: "#5EAF84",
 		color: "#fff",
 		stroke: "#fff",
 		weight: 2,
 		dashArray: '2',
 		opacity: 1,
-		fillOpacity: 0.8
+		fillOpacity: 0.5
 	};
 
 	var estaciones = L.geoJson(estaciones_puebla, {
@@ -62,6 +62,7 @@ angular.module('dotmxApp')
 			
 			circleLayer.addLayer(circle);
 			circleLayer.addTo(map);
+			estaciones.bringToFront();
 			
 			layer.bindPopup(contenthtml).openPopup();
 			
