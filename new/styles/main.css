@@ -174,3 +174,5 @@
 .navbar-nav > li > a{
 	text-transform: uppercase;
 }
+
+.sidebar { width:390px !important;}
