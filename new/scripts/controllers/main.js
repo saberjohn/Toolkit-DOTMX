@@ -76,17 +76,7 @@ angular.module('dotmxApp')
 			circleLayer.clearLayers();
 			var circle = L.circle([layer._latlng.lat, layer._latlng.lng], 800, geojsonMarkerOptions2);
 			
-			//prueba
-			/*
-			var contenthtml = "<p>";
-				contenthtml += "Nombre: " + feature.properties.Name + "<br/>";
-				contenthtml += "Sum_PerR_1: " + feature.properties.Sum_PerR_1 + "<br/>";
-				contenthtml += "PobDesocup: " + feature.properties.PobDesocup + "<br/>";
-				contenthtml += "DensPobAvg: " + feature.properties.DensPobAvg + "<br/>";
-			contenthtml += "</p>";
-			*/
-			
-			//datos - falta meter labels correctos de las propiedades
+			//datos
 			$("#info-Name").html(feature.properties.Name);
 			$("#info-Descriptio").html(feature.properties.Descriptio);
 			$("#info-Sum_PerR_1").html(feature.properties.Sum_PerR_1);
@@ -108,8 +98,6 @@ angular.module('dotmxApp')
 			circleLayer.addLayer(circle);
 			circleLayer.addTo(map);
 			estaciones.bringToFront();
-			
-			/*layer.bindPopup(contenthtml).openPopup();*/
 			
 			$(".leaflet-popup-close-button").click( function() {
 				circleLayer.clearLayers();
