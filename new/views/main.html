@@ -154,18 +154,42 @@
 				<!-- Tab panes -->
 				<div class="sidebar-content active">
 					<div class="sidebar-pane" id="home">
-						<h3>Información Poblacional</h3>
-						<p>
-							<ul>
-								<li>Nombre: <span id="info-Name"></span></li>
-								<li>Sum_PerR_1: <span id="info-Sum_PerR_1"></span></li>
-								<li>PobDesocup: <span id="info-PobDesocup"></span></li>
-								<li>DensPobAvg: <span id="info-DensPobAvg"></span></li>
-							</ul>
-						</p>
+						<ul class="nav nav-pills test" style="visibility:visible;margin:0;padding:5px 0;width:105%;border-color: #7C8990;border-width: 1px 0px;">
+							<li style="padding:5px 0;margin:0" class="col-xs-4 col-sm-4 col-md-4 active">
+								<a id="poblacion" style="padding:10px 5px;">Población</a>
+							</li>
+						</ul>
+						
+						<div class="tab-content">
+							<div class="row tab-pane active poblacion" style="margin:0;">
+								<div class="sl-body">
+									<ul id="listdata">
+										<li>Nombre: <span id="info-Name"></span></li>
+										<li>Descripción: <span id="info-Descriptio"></span></li>
+										<li>Sum_PerR_1: <span id="info-Sum_PerR_1"></span></li>
+										<li>Sum_PerR_2: <span id="info-Sum_PerR_2"></span></li>
+										<li>PerRemPrim: <span id="info-PerRemPrim"></span></li>
+										<li>PerRemSecu: <span id="info-PerRemSecu"></span></li>
+										<li>PerRemTerc: <span id="info-PerRemTerc"></span></li>
+										<li>UEprim: <span id="info-UEprim"></span></li>
+										<li>UEsecu: <span id="info-UEsecu"></span></li>
+										<li>UEterc: <span id="info-UEterc"></span></li>
+										<li>Población total: <span id="info-PobTot"></span></li>
+										<li>Viviendas deshabitadas: <span id="info-VivDeshab"></span></li>
+										<li>Viviendas con auto: <span id="info-VivConAuto"></span></li>
+										<li>Viviendas con todos los servivios: <span id="info-VivTodServ"></span></li>
+										<li>Población ocupada: <span id="info-PobOcupada"></span></li>
+										<li>Población desocupada: <span id="info-PobDesocup"></span></li>
+										<li>Densidad de población: <span id="info-DensPobAvg"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			
+			
 			
             <div id="map-box" class="sidebar-map"></div>
         </div>
