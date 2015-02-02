@@ -7,11 +7,12 @@ angular.module('dotmxApp')
     };
 	$document.on('scroll', function() {
 		var topPosition = angular.element(document.getElementById('topcontrol'));
+
 		if($document.scrollTop() >= 65){
 			topPosition.addClass('dark');
 		}
 		else{
-			topPosition.removeClass('dark');	
+			topPosition.removeClass('dark');
 		}
 	});
 	

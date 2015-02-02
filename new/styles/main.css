@@ -4,10 +4,17 @@
     top:0;
     left:0;
     right:0;
-    z-index:999;
+    z-index:9999;
     -webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.hide-header{
+    top:-55px;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
 }
 .navbar-nav{
     float:right !important;
