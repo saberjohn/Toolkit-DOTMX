@@ -164,8 +164,9 @@
 							<div class="row tab-pane active poblacion" style="margin:0;">
 								<div class="sl-body">
 									<ul id="listdata">
-										<li>Destinos de la ruta: </li>
 										<li>Nombre de la estación: <span id="info-Name"></span></li>
+										<li>Agencia: <span id="info-Agencia"></span></li>
+										
 										<li>Descripción: <span id="info-Descriptio"></span></li>										
 										<li>Total de escuelas: <span id="info-Escuelas"></span></li>
 										<li>Centros de salud y asistencia médica: <span id="info-AsistMed"></span></li>
@@ -198,7 +199,7 @@
 
             <div id="map-box" class="sidebar-map"></div>
             
-            <div class="selecciona-ciudad">
+            <div class="select-city">
 				<ul class="nav nav-pills city" id="focus-city">
 				  <li class="active"><a id="cdmx">Ciudad de México</a></li>
 				  <li><a id="gdl">Guadalajara</a></li>
@@ -211,6 +212,11 @@
 				<div class="openSC">
 					<span class="city bbvanalyzr-down-city"></span>
 				</div>
+			</div>
+			
+			<div class="select-agency">
+				<ul class="nav nav-pills city" id="focus-agency"></ul>
+				<div class="openSC"><span class="agency bbvanalyzr-down-agency"></span></div>
 			</div>
         </div>
     </div>
