@@ -19,25 +19,25 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 		var city = $(this).attr("id");
 		
 		if(city == "cdmx") {
-			print(estaciones_zmvm);
+			print(estaciones_zmvm, lineas_zmvm);
 			map.setView([19.432711775616433, -99.13325428962708], 13);
 		} else if(city == "puebla") {
-			print(estaciones_puebla);
+			print(estaciones_puebla, lineas_puebla);
 			map.setView([19.044918668412617, -98.20747375488281], 13);
 		} else if(city == "gdl") {
-			print(estaciones_gdl);
+			print(estaciones_gdl, lineas_gdl);
 			map.setView([20.674929132304698, -103.35479378700256], 13);
 		} else if(city == "mty") {
-			print(estaciones_mty);
+			print(estaciones_mty, lineas_mty);
 			map.setView([25.68713198895331, -100.33032417297363], 13);
 		} else if(city == "juarez") {
-			print(estaciones_juarez);
+			print(estaciones_juarez, lineas_juarez);
 			map.setView([31.669526781976998, -106.45245552062987], 13);
 		} else if(city == "leon") {
-			print(estaciones_leon);
+			print(estaciones_leon, lineas_leon);
 			map.setView([21.125937978524263, -101.70035362243652], 13);
 		} else if(city == "chihua") {
-			print(estaciones_chihuahua);
+			print(estaciones_chihuahua, lineas_chihuahua);
 			map.setView([28.642690467330326, -106.08458518981934], 13);
 		}			
 	});
@@ -74,27 +74,41 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 		fillOpacity: 0.5
 	};
 	
-	print(estaciones_zmvm);
+	var lineStyle = {
+		"color": "#ff7800",
+		"weight": 5,
+		"opacity": 0.65
+	};
+
+
+	print(estaciones_zmvm, lineas_zmvm);
 	
-	function print(cityLayer) {
+	function print(estaciones, lineas) {
+		/*clear layers*/
 		estacionesLayer.clearLayers();
 		lineasLayer.clearLayers();
 		circleLayer.clearLayers();
 		
-		var estaciones = L.geoJson(cityLayer, {
+		/*estaciones*/
+		var estacionesGeo = L.geoJson(estaciones, {
 			onEachFeature: onEachFeature,
 			pointToLayer: function (feature, latlng) {
 				return L.circleMarker(latlng, geojsonMarkerOptions);
 			}
 		});
-		
-		estacionesLayer.addLayer(estaciones);
+		estacionesLayer.addLayer(estacionesGeo);
 		estacionesLayer.addTo(map);
+		
+		/*lineas*/
+		var lineasGeo = L.geoJson(lineas, {
+			style: lineStyle
+		});
+		lineasLayer.addLayer(lineasGeo);
+		lineasLayer.addTo(map);
 		
 		function onEachFeature(feature, layer) {
 			layer.on('click', function(e) {
-				
-				estaciones.setStyle({
+				estacionesGeo.setStyle({
 					radius: 10,
 					fillColor: "#47c9af",
 					color: "#fff",
@@ -137,7 +151,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 				
 				circleLayer.addLayer(circle);
 				circleLayer.addTo(map);
-				estaciones.bringToFront();
+				estacionesGeo.bringToFront();
 				
 				$(".leaflet-popup-close-button").click( function() {
 					circleLayer.clearLayers();
