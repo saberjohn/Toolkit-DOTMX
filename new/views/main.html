@@ -164,23 +164,30 @@
 							<div class="row tab-pane active poblacion" style="margin:0;">
 								<div class="sl-body">
 									<ul id="listdata">
-										<li>Nombre: <span id="info-Name"></span></li>
-										<li>Descripción: <span id="info-Descriptio"></span></li>
-										<li>Sum_PerR_1: <span id="info-Sum_PerR_1"></span></li>
-										<li>Sum_PerR_2: <span id="info-Sum_PerR_2"></span></li>
-										<li>PerRemPrim: <span id="info-PerRemPrim"></span></li>
-										<li>PerRemSecu: <span id="info-PerRemSecu"></span></li>
-										<li>PerRemTerc: <span id="info-PerRemTerc"></span></li>
-										<li>UEprim: <span id="info-UEprim"></span></li>
-										<li>UEsecu: <span id="info-UEsecu"></span></li>
-										<li>UEterc: <span id="info-UEterc"></span></li>
+										<li>Destinos de la ruta: </li>
+										<li>Nombre de la estación: <span id="info-Name"></span></li>
+										<li>Descripción: <span id="info-Descriptio"></span></li>										
+										<li>Total de escuelas: <span id="info-Escuelas"></span></li>
+										<li>Centros de salud y asistencia médica: <span id="info-AsistMed"></span></li>
+										<li>Centros comerciales: <span id="info-CComerc"></span></li>
+										<li>Mercados: <span id="info-Mercados"></span></li>
+										<li>Templos: <span id="info-Templos"></span></li>
+										<li>Plazas: <span id="info-Plazas"></span></li>
+										<li>Intalaciones recreativas y deportivas: <span id="info-Deport"></span></li>
+										<li>Personal remunerado del sector primario: <span id="info-PerRemPrim"></span></li>
+										<li>Personal remunerado del sector secundario: <span id="info-PerRemSecu"></span></li>
+										<li>Personal remunerado del sector terciario: <span id="info-PerRemTerc"></span></li>
+										<li>Unidades económicas del sector primario: <span id="info-UEprim"></span></li>
+										<li>Unidades económicas del sector secundario: <span id="info-UEsecu"></span></li>
+										<li>Unidades económicas del sector terciario: <span id="info-UEterc"></span></li>
 										<li>Población total: <span id="info-PobTot"></span></li>
+										<li>Viviendas totales: <span id="info-VivTot"></span></li>
 										<li>Viviendas deshabitadas: <span id="info-VivDeshab"></span></li>
-										<li>Viviendas con auto: <span id="info-VivConAuto"></span></li>
+										<li>Viviendas con automóvil: <span id="info-VivConAuto"></span></li>
 										<li>Viviendas con todos los servivios: <span id="info-VivTodServ"></span></li>
 										<li>Población ocupada: <span id="info-PobOcupada"></span></li>
 										<li>Población desocupada: <span id="info-PobDesocup"></span></li>
-										<li>Densidad de población: <span id="info-DensPobAvg"></span></li>
+										<li>Densidad de población promedio: <span id="info-DensPobAvg"></span></li>
 									</ul>
 								</div>
 							</div>
@@ -188,10 +195,23 @@
 					</div>
 				</div>
 			</div>
-			
-			
-			
+
             <div id="map-box" class="sidebar-map"></div>
+            
+            <div class="selecciona-ciudad">
+				<ul class="nav nav-pills city" id="focus-city">
+				  <li class="active"><a id="cdmx">Ciudad de México</a></li>
+				  <li><a id="gdl">Guadalajara</a></li>
+				  <li><a id="puebla">Puebla</a></li>
+				  <li><a id="mty">Monterrey</a></li>
+				  <li><a id="juarez">Juarez</a></li>
+				  <li><a id="leon">Leon</a></li>
+				  <li><a id="chihua">Chihuahua</a></li>
+				</ul>
+				<div class="openSC">
+					<span class="city bbvanalyzr-down-city"></span>
+				</div>
+			</div>
         </div>
     </div>
 </section>
