@@ -16,6 +16,9 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	
 	
 	$("#focus-city > li > a").click( function() {
+		$("#focus-city > li").removeClass("active");
+		$(this).parent().addClass("active");
+		
 		var city = $(this).attr("id");
 		
 		if(city == "cdmx") {
@@ -117,15 +120,26 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 				});
 				
 				$("#focus-agency > li > a").click( function () {
-					print(estaciones, lineas, ciudad, $(this).attr("id"));
+					if($(this).hasClass("active-agency")) {
+						$(this).removeClass("active-agency");
+					} else {
+						$(this).addClass("active-agency");
+					}
+					print(estaciones, lineas, ciudad, true);
 				});
 			}
 		} else {
+			var arrayAgencies  = $(".active-agency").toArray();
+			var agenciesSelect = new Array();
+			arrayAgencies.forEach(function(entry) {
+				agenciesSelect.push($(entry).attr("id"));
+			});
+			
 			/*lineas*/
 			var lineasGeo = L.geoJson(lineas, {
 				style: lineStyle,
 				filter: function (feature, layer) {
-					if(filter == feature.properties.Agencia) return feature.properties;
+					if(agenciesSelect.indexOf(feature.properties.Agencia) != -1) return feature.properties;
 					return false;
 				}
 			});
@@ -135,7 +149,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			/*estaciones*/
 			var estacionesGeo = L.geoJson(estaciones, {
 				filter: function (feature, layer) {
-					if(filter == feature.properties.Agencia) return feature.properties;
+					if(agenciesSelect.indexOf(feature.properties.Agencia) != -1) return feature.properties;
 					return false;
 				},
 				onEachFeature: onEachFeature,
@@ -146,7 +160,9 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			estacionesLayer.addLayer(estacionesGeo);
 			estacionesLayer.addTo(map);
 
-			map.fitBounds(lineasGeo);			
+			if(agenciesSelect.length != 0) {
+				map.fitBounds(lineasGeo);
+			}		
 		}
 		
 		function onEachFeature(feature, layer) {
