@@ -83,7 +83,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	var agencies = new Array();
 	print(estaciones_zmvm, lineas_zmvm, "cdmx");
 	
-	function print(estaciones, lineas, ciudad) {
+	function print(estaciones, lineas, ciudad, filter) {
 		agencies = new Array();
 		
 		/*clear layers*/
@@ -91,29 +91,62 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 		lineasLayer.clearLayers();
 		circleLayer.clearLayers();
 		
-		/*lineas*/
-		var lineasGeo = L.geoJson(lineas, {
-			style: lineStyle
-		});
-		lineasLayer.addLayer(lineasGeo);
-		lineasLayer.addTo(map);
-		
-		/*estaciones*/
-		var estacionesGeo = L.geoJson(estaciones, {
-			onEachFeature: onEachFeature,
-			pointToLayer: function (feature, latlng) {
-				return L.circleMarker(latlng, geojsonMarkerOptions);
-			}
-		});
-		estacionesLayer.addLayer(estacionesGeo);
-		estacionesLayer.addTo(map);
-		
-		/*Agencias*/
-		$("#focus-agency").html("");
-		if(agencies.length > 0) {
-			agencies.forEach(function(entry) {
-				$("#focus-agency").append('<li><a id="' + entry + '">' + entry +'</a></li>');
+		if(filter == undefined) {
+			/*lineas*/
+			var lineasGeo = L.geoJson(lineas, {
+				style: lineStyle
 			});
+			lineasLayer.addLayer(lineasGeo);
+			lineasLayer.addTo(map);
+			
+			/*estaciones*/
+			var estacionesGeo = L.geoJson(estaciones, {
+				onEachFeature: onEachFeature,
+				pointToLayer: function (feature, latlng) {
+					return L.circleMarker(latlng, geojsonMarkerOptions);
+				}
+			});
+			estacionesLayer.addLayer(estacionesGeo);
+			estacionesLayer.addTo(map);
+			
+			/*Agencias*/
+			$("#focus-agency").html("");
+			if(agencies.length > 1) {
+				agencies.forEach(function(entry) {
+					$("#focus-agency").append('<li><a id="' + entry + '">' + entry +'</a></li>');
+				});
+				
+				$("#focus-agency > li > a").click( function () {
+					print(estaciones, lineas, ciudad, $(this).attr("id"));
+				});
+			}
+		} else {
+			/*lineas*/
+			var lineasGeo = L.geoJson(lineas, {
+				style: lineStyle,
+				filter: function (feature, layer) {
+					if(filter == feature.properties.Agencia) return feature.properties;
+					return false;
+				}
+			});
+			lineasLayer.addLayer(lineasGeo);
+			lineasLayer.addTo(map);
+			
+			/*estaciones*/
+			var estacionesGeo = L.geoJson(estaciones, {
+				filter: function (feature, layer) {
+					if(filter == feature.properties.Agencia) return feature.properties;
+					return false;
+				},
+				onEachFeature: onEachFeature,
+				pointToLayer: function (feature, latlng) {
+					return L.circleMarker(latlng, geojsonMarkerOptions);
+				}
+			});
+			estacionesLayer.addLayer(estacionesGeo);
+			estacionesLayer.addTo(map);
+
+			map.fitBounds(lineasGeo);			
 		}
 		
 		function onEachFeature(feature, layer) {
