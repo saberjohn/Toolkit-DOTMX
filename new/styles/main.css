@@ -174,3 +174,8 @@
 .navbar-nav > li > a{
 	text-transform: uppercase;
 }
+
+.active-agency {
+	background-color: #337ab7 !important;
+	color: #47c9af !important;
+}
