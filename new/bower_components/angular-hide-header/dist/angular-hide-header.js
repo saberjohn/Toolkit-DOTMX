@@ -12,9 +12,6 @@
 					var hheight = element[0].scrollHeight;
 					var pxOffset = parseInt(hideOffset);
 					$timeout.cancel(scroll_time);
-					console.log(current_scroll);
-					console.log(hheight);
-					console.log(scrollposition);
 					if(current_scroll >= hheight+pxOffset){
 						if (current_scroll < scrollposition) {
 							element.css({'top':"0px"});
@@ -22,15 +19,14 @@
 						else if (current_scroll > scrollposition) {
 							element.css({
 								'top':-hheight+"px",
-								'transition':'top 0.25s',
-								'-webkit-transition': 'top 0.25s',
-								'-moz-transition': 'top 0.25s',
-								'-ms-transition': 'top 0.25s',
-								'-o-transition': 'top 0.25s',
+								'transition':'all 0.25s',
+								'-webkit-transition': 'all 0.25s',
+								'-moz-transition': 'all 0.25s',
+								'-ms-transition': 'all 0.25s',
+								'-o-transition': 'all 0.25s',
 							});
 						}
 					}
-
 					scroll_time = $timeout(function(){
 						scrollposition = body[0].scrollTop;
 					},60);
