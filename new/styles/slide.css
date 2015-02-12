@@ -1,8 +1,9 @@
+
 .cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow:after{ 
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 75%;
     top: 0px;
     padding:0;
     left: 0px;
@@ -14,6 +15,7 @@
     background:#000;
 }
 .cb-slideshow:after { 
+    height: 100%;
     content: '';
     background: transparent url('../assets/pattern_vertical.png') repeat bottom left;
 }
