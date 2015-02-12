@@ -169,6 +169,7 @@
     width: 35px;
     z-index: 30;
     font-size: 20px;
+    cursor: pointer;
 }
 .dark{
     opacity: 1 !important;
