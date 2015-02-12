@@ -1,13 +1,31 @@
 .d-header{
-    background-color:rgba(0,0,0,0.8);
-    position:fixed;
-    top:0;
+    background-color: transparent;
     left:0;
+    position:fixed;
     right:0;
+    top:0;
+    padding:20px 0;
     z-index:9999;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+    /*-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);*/
+}
+.black{
+    background-color:rgba(0,0,0,0.8);
     -webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    padding: 0 !important;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
 }
 .navbar-nav{
     float:right !important;
@@ -36,6 +54,10 @@
 .main p{
     font-size: 18px;
     margin:0 0 50px;
+}
+.main .container{
+    display:table;
+    height:75%;
 }
 .mouse-icon{
     border-radius: 16px;
