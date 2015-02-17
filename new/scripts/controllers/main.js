@@ -272,6 +272,37 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 				
 				map.panTo(new L.LatLng(layer._latlng.lat, layer._latlng.lng));
 				sidebar.open("home");
+				
+				// Numeral
+				var infoPerRemPrim = $("#info-PerRemPrim").text();
+				var infoPerRemSecu = $("#info-PerRemSecu").text();
+				var infoPerRemTerc = $("#info-PerRemTerc").text();
+				var infoUEprim = $("#info-UEprim").text();
+				var infoUEsecu = $("#info-UEsecu").text();
+				var infoUEterc = $("#info-UEterc").text();
+				var infoPobTot = $("#info-PobTot").text();
+				var infoVivTot = $("#info-VivTot").text();
+				var infoVivDeshab = $("#info-VivDeshab").text();
+				var infoVivConAuto = $("#info-VivConAuto").text();
+				var infoVivTodServ = $("#info-VivTodServ").text();
+				var infoPobOcupada = $("#info-PobOcupada").text();
+				var infoPobDesocup = $("#info-PobDesocup").text();
+				var infoDensPobAvg = $("#info-DensPobAvg").text();
+
+				$("#info-PerRemPrim").text(numeral(infoPerRemPrim).format('0,0'));
+				$("#info-PerRemSecu").text(numeral(infoPerRemSecu).format('0,0'));
+				$("#info-PerRemTerc").text(numeral(infoPerRemTerc).format('0,0'));
+				$("#info-UEprim").text(numeral(infoUEprim).format('0,0'));
+				$("#info-UEsecu").text(numeral(infoUEsecu).format('0,0'));
+				$("#info-UEterc").text(numeral(infoUEterc).format('0,0'));
+				$("#info-PobTot").text(numeral(infoPobTot).format('0,0'));
+				$("#info-VivTot").text(numeral(infoVivTot).format('0,0'));
+				$("#info-VivDeshab").text(numeral(infoVivDeshab).format('0,0'));
+				$("#info-VivConAuto").text(numeral(infoVivConAuto).format('0,0'));
+				$("#info-VivTodServ").text(numeral(infoVivTodServ).format('0,0'));
+				$("#info-PobOcupada").text(numeral(infoPobOcupada).format('0,0'));
+				$("#info-PobDesocup").text(numeral(infoPobDesocup).format('0,0'));
+				$("#info-DensPobAvg").text(numeral(infoDensPobAvg).format('0,0'));
 			});
 		}
 	}
@@ -280,4 +311,5 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 		circleLayer.clearLayers();
 		sidebar.close();
 	});
+
 });
