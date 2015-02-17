@@ -32,10 +32,10 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			print(estaciones_puebla, lineas_puebla, city);
 			map.setView([19.044918668412617, -98.20747375488281], 13);
 		} else if(city == "gdl") {
-			print(estaciones_gdl, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_gdl, lineas_gdl, city); //cambiar las lineas
 			map.setView([20.674929132304698, -103.35479378700256], 13);
 		} else if(city == "mty") {
-			print(estaciones_mty, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_mty, lineas_mty, city); //cambiar las lineas
 			map.setView([25.68713198895331, -100.33032417297363], 13);
 		} else if(city == "juarez") {
 			print(estaciones_juarez, lineas_juarez, city);
@@ -47,10 +47,10 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			print(estaciones_chihuahua, lineas_chihuahua, city);
 			map.setView([28.642690467330326, -106.08458518981934], 13);
 		} else if(city == "aguas") {
-			print(estaciones_aguas, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_aguas, lineas_aguas, city); //cambiar las lineas
 			map.setView([21.876951611919733, -102.3012113571167], 13);
 		} else if(city == "pachuca") {
-			print(estaciones_pachuca, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_pachuca, lineas_pachuca, city); //cambiar las lineas
 			map.setView([20.117114283545682, -98.74726295471191], 13);
 		}				
 	});
