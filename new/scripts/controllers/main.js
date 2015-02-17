@@ -7,10 +7,14 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
     
 	$document.on('scroll', function() {
 		var topPosition = angular.element(document.getElementById('topcontrol'));
-		if($document.scrollTop() >= 65) {
+		var topHeader = angular.element(document.getElementsByClassName('d-header'));
+		if($document.scrollTop() >= 65){
 			topPosition.addClass('dark');
-		} else {
-			topPosition.removeClass('dark');	
+			topHeader.addClass('black');
+		}
+		else{
+			topPosition.removeClass('dark');
+			topHeader.removeClass('black');
 		}
 	});
 	
@@ -28,10 +32,10 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			print(estaciones_puebla, lineas_puebla, city);
 			map.setView([19.044918668412617, -98.20747375488281], 13);
 		} else if(city == "gdl") {
-			print(estaciones_gdl, lineas_gdl, city);
+			print(estaciones_gdl, lineas_chihuahua, city); //cambiar las lineas
 			map.setView([20.674929132304698, -103.35479378700256], 13);
 		} else if(city == "mty") {
-			print(estaciones_mty, lineas_mty, city);
+			print(estaciones_mty, lineas_chihuahua, city); //cambiar las lineas
 			map.setView([25.68713198895331, -100.33032417297363], 13);
 		} else if(city == "juarez") {
 			print(estaciones_juarez, lineas_juarez, city);
@@ -42,11 +46,17 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 		} else if(city == "chihua") {
 			print(estaciones_chihuahua, lineas_chihuahua, city);
 			map.setView([28.642690467330326, -106.08458518981934], 13);
-		}			
+		} else if(city == "aguas") {
+			print(estaciones_aguas, lineas_chihuahua, city); //cambiar las lineas
+			map.setView([21.876951611919733, -102.3012113571167], 13);
+		} else if(city == "pachuca") {
+			print(estaciones_pachuca, lineas_chihuahua, city); //cambiar las lineas
+			map.setView([20.117114283545682, -98.74726295471191], 13);
+		}				
 	});
 	
 	L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
-	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26').setView([19.432711775616433, -99.13325428962708], 14);
+	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 14);
 	
 	var circleLayer		= new L.LayerGroup();
 	var estacionesLayer	= new L.LayerGroup();

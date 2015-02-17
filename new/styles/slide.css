@@ -1,8 +1,9 @@
+
 .cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow:after{ 
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 82%;
     top: 0px;
     padding:0;
     left: 0px;
@@ -14,8 +15,9 @@
     background:#000;
 }
 .cb-slideshow:after { 
+    height: 100%;
     content: '';
-    background: transparent url('../assets/pattern_vertical.png') repeat top left;
+    background: transparent url('../assets/pattern_vertical.png') repeat bottom left;
 }
 .cb-slideshow li span { 
     width: 100%;
@@ -58,10 +60,10 @@
     line-height: 200px; 
 }*/
 .cb-slideshow li:nth-child(1) span { 
-    background-image: url('../assets/background-inicio.png'); 
+    background-image: url('../assets/dot_bgn1.jpg'); 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background-image: url('../assets/movilidad.png');
+    background-image: url('../assets/dot_bgn2.jpg');
     -webkit-animation-delay: 8s;
     -moz-animation-delay: 8s;
     -o-animation-delay: 8s;
@@ -69,7 +71,7 @@
     animation-delay: 8s; 
 }
 .cb-slideshow li:nth-child(3) span { 
-    background-image: url('../assets/movilidad2.png');
+    background-image: url('../assets/dot_bgn3.jpg');
     -webkit-animation-delay: 16s;
     -moz-animation-delay: 16s;
     -o-animation-delay: 16s;
@@ -77,7 +79,7 @@
     animation-delay: 16s; 
 }
 .cb-slideshow li:nth-child(4) span { 
-    background-image: url('../assets/background2.png');
+    background-image: url('../assets/dot_bgn4.jpg');
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -85,7 +87,7 @@
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-    background-image: url('../assets/background3.png'); 
+    background-image: url('../assets/dot_bgn5.jpg'); 
     -webkit-animation-delay: 32s;
     -moz-animation-delay: 32s;
     -o-animation-delay: 32s;
