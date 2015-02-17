@@ -27,7 +27,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 		
 		if(city == "cdmx") {
 			print(estaciones_zmvm, lineas_zmvm, city);
-			map.setView([19.432711775616433, -99.13325428962708], 13);
+			map.setView([19.432711775616433, -99.13325428962708], 12);
 		} else if(city == "puebla") {
 			print(estaciones_puebla, lineas_puebla, city);
 			map.setView([19.044918668412617, -98.20747375488281], 13);
@@ -56,7 +56,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	});
 	
 	L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
-	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 14);
+	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 13);
 	
 	var circleLayer		= new L.LayerGroup();
 	var estacionesLayer	= new L.LayerGroup();
