@@ -67,7 +67,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	
 	var geojsonMarkerOptions = {
 		radius: 10,
-		fillColor: "#47c9af",
+		fillColor: "#008631",
 		color: "#fff",
 		stroke: "#fff",
 		weight: 2,
@@ -185,7 +185,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			layer.on('click', function(e) {
 				estacionesGeo.setStyle({
 					radius: 10,
-					fillColor: "#47c9af",
+					fillColor: "#008631",
 					color: "#fff",
 					stroke: "#fff",
 					weight: 2,
