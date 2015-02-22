@@ -41,7 +41,16 @@
     -o-transition: color 0.25s linear;
     transition: color 0.25s linear;
 }
-
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a.active{
+    border-bottom: 2px solid#008631;
+    color:#ffffff !important;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
 .main{
     height: 100vh;
     position: relative;
