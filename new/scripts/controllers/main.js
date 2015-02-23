@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
-    $scope.first = {
+    $scope.fiscal_first = {
+		isFirstOpen: true
+    };
+    $scope.funding_first = {
 		isFirstOpen: true
     };
     
@@ -21,7 +24,10 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	
 	$("#focus-city > li > a").click( function() {
 		$("#focus-city > li").removeClass("active");
+		$("#focus-city > li>a").removeClass("dotmx_marker");
+
 		$(this).parent().addClass("active");
+		$(this).addClass("dotmx_marker");
 		
 		var city = $(this).attr("id");
 		
@@ -130,10 +136,13 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 				});
 				
 				$("#focus-agency > li > a").click( function () {
-					if($(this).hasClass("active-agency")) {
+					console.log(this.text);
+					if($(this).hasClass("active-agency") && $(this).hasClass("dotmx_transport")) {
 						$(this).removeClass("active-agency");
+						$(this).removeClass("dotmx_transport");
 					} else {
 						$(this).addClass("active-agency");
+						$(this).addClass("dotmx_transport");
 					}
 					print(estaciones, lineas, ciudad, true);
 				});
