@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="text-center" style="margin-bottom:40px;padding:0 15px;">
-				<h3 style="color:#47c9af;margin:0 0 10px 0;">Diagnóstico de Mecanismos de Desarrollo Urbano</h3>
+				<h3 style="color:#008631;margin:0 0 10px 0;">Diagnóstico de Mecanismos de Desarrollo Urbano</h3>
 				<span style="color:#37474F;font-size:16px;">para transitar a ciudades bajas en emisiones en el sector transporte</span>    
 			</div>
 			<div class="col-lg-12">
@@ -206,15 +206,15 @@
 										<div class="row">
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
 												<accordion >
-													<accordion-group is-open="first.isFirstOpen" >
-														<accordion-heading is-open="first.isFirstOpen" ng-class="{collapse:!first.isFirstOpen}">
-														Descripción <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': first.isFirstOpen, 'glyphicon-chevron-right': !first.isFirstOpen}"></i>
+													<accordion-group is-open="fiscal_first.isFirstOpen" >
+														<accordion-heading is-open="fiscal_first.isFirstOpen" ng-class="{collapse:!fiscal_first.isFirstOpen}">
+														Descripción <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': fiscal_first.isFirstOpen, 'glyphicon-chevron-right': !fiscal_first.isFirstOpen}"></i>
 														</accordion-heading>
 														<div class="row">
 															<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
 																<p>Los mecanismos fiscales generan un cambio de comportamiento dependiendo de si se diseñan como incentivos positivos, como exenciones tributarias, o como incentivos negativos gravando actividades no deseadas. Las acciones tomadas por autoridades de desarrollo urbano, que directa o indirectamente incrementan el valor del suelo Y benefician a los propietarios de dichos predios, pero ese valor se convierte en un bien privado. Capturar ese incremento para beneficiar a la sociedad se logra por medio del cobro por el uso de los derechos de construcción (Smolka, 2013), algo que se conoce comúnmente como “captura de valor”. 
-																</p><p>
-																Los mecanismos fiscales pueden recuperar valor por concesiones de densidad o acciones de mejoramiento que se aplican a cierta zona</p>
+																</p>
+																<p>Los mecanismos fiscales pueden recuperar valor por concesiones de densidad o acciones de mejoramiento que se aplican a cierta zona</p>
 															</div>
 															<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 																<div class="tabs-img"> 
@@ -223,9 +223,9 @@
 															</div>
 														</div>
 													</accordion-group>
-													<accordion-group is-open="second.open">
+													<accordion-group is-open="fiscal_second.open">
 														<accordion-heading>
-														Contribución de mejoras <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': second.open, 'glyphicon-chevron-right': !second.open}"></i>
+														Contribución de mejoras <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': fiscal_second.open, 'glyphicon-chevron-right': !fiscal_second.open}"></i>
 														</accordion-heading>
 														<div class="row">
 															<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -238,17 +238,14 @@
 															</div>
 														</div>
 													</accordion-group>
-													<accordion-group is-open="third.open">
+													<accordion-group is-open="fiscal_third.open">
 														<accordion-heading>
-														Derechos <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': second.open, 'glyphicon-chevron-right': !second.open}"></i>
+														Derechos <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': fiscal_third.open, 'glyphicon-chevron-right': !fiscal_third.open}"></i>
 														</accordion-heading>
 														<div class="row">
 															<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-																<p>Los derechos son contribuciones fiscales que gravan los bienes y servicios públicos.
-El principal bien en el desarrollo urbano es el suelo, por ello los mecanismos identificados están relacionados con el uso y aprovechamiento de éste. Debido a que los derechos también gravan servicios, muchas veces se confunden con las contribuciones; sin embargo, éstos no gravan el servicio de obra pública. 
-
-Es importante aclarar que este mecanismo no sirve para la captura de valor porque lo que grava es un servicio público, por ello si se quiere capturar el valor el mecanismo correcto es el de contribución de mejoras.
-</p>
+																<p>Los derechos son contribuciones fiscales que gravan los bienes y servicios públicos.El principal bien en el desarrollo urbano es el suelo, por ello los mecanismos identificados están relacionados con el uso y aprovechamiento de éste. Debido a que los derechos también gravan servicios, muchas veces se confunden con las contribuciones; sin embargo, éstos no gravan el servicio de obra pública. </p>
+																<p>Es importante aclarar que este mecanismo no sirve para la captura de valor porque lo que grava es un servicio público, por ello si se quiere capturar el valor el mecanismo correcto es el de contribución de mejoras.</p>
 															</div>
 															<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 																<div class="tabs-img"> 
@@ -257,15 +254,15 @@ Es importante aclarar que este mecanismo no sirve para la captura de valor porqu
 															</div>
 														</div>
 													</accordion-group>
-													<accordion-group is-open="fourth.open">
+													<accordion-group is-open="fiscal_fourth.open">
 														<accordion-heading>
-														Impuestos <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': second.open, 'glyphicon-chevron-right': !second.open}"></i>
+														Impuestos <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': fiscal_fourth.open, 'glyphicon-chevron-right': !fiscal_fourth	.open}"></i>
 														</accordion-heading>
 														<div class="row">
 															<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-																<p>Los impuestos son las contribuciones establecidas en la ley que deben pagar las personas físicas y morales que se encuentren en la situación jurídica o de hecho prevista por la misma y que sean distintas a las aportaciones de seguridad social, contribución de mejoras y derechos (Alcalá, 2013).
-Una de las principales fuentes de ingreso municipal es el impuesto predial. Son sujetos al predial, las personas físicas y morales que sean propietarias del suelo o las construcciones adheridas a éste, independientemente de los derechos que sobre las construcciones tenga un tercero.  La principal ventaja es que, al incrementar la densidad poblacional y las construcciones dentro de una ciudad, también incrementa la recaudación del predial. Al permitir la expansión urbana, reduce la base tributaria de una ciudad, haciendo cada vez más difícil mantenerla por la baja recaudación y el costo de mantenimiento de los servicios. Además, la expansión urbana fuera de los límites municipales (zonas metropolitanas) reduce los impuestos recibidos por la ciudad.
-</p>
+																<p>Los impuestos son las contribuciones establecidas en la ley que deben pagar las personas físicas y morales que se encuentren en la situación jurídica o de hecho prevista por la misma y que sean distintas a las aportaciones de seguridad social, contribución de mejoras y derechos (Alcalá, 2013). Una de las principales fuentes de ingreso municipal es el impuesto predial.</p>
+																<p>Son sujetos al predial, las personas físicas y morales que sean propietarias del suelo o las construcciones adheridas a éste, independientemente de los derechos que sobre las construcciones tenga un tercero.  La principal ventaja es que, al incrementar la densidad poblacional y las construcciones dentro de una ciudad, también incrementa la recaudación del predial.</p>
+																<p>Al permitir la expansión urbana, reduce la base tributaria de una ciudad, haciendo cada vez más difícil mantenerla por la baja recaudación y el costo de mantenimiento de los servicios. Además, la expansión urbana fuera de los límites municipales (zonas metropolitanas) reduce los impuestos recibidos por la ciudad.</p>
 															</div>
 															<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 																<div class="tabs-img"> 
@@ -280,18 +277,49 @@ Una de las principales fuentes de ingreso municipal es el impuesto predial. Son 
 									</tab>
 									<tab heading="De Financiamiento">
 										<div class="row">
-											<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-												<p>Disposiciones jurídicas para que las autoridades de desarrollo urbano adquieran la propiedad, establezcan limitaciones a la propiedad privada y eviten acciones de especulación en proyectos inmobiliarios.</p>
-												<ul>
-													<li><strong>EXPROPIACIÓN</strong></li>
-													<li><strong>DERECHO DE PREFERENCIA / DERECHO DEL TANTO</strong></li>
-													<li><strong>ACCIONES PARA EVITAR LA ESPECULACIÓN</strong></li>
-												</ul>
-											</div>
-											<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12" style="padding-top:5px;">
-												<div class="tabs-img"> 
-													<img ng-src="assets/tabbed-picture3.png" alt="">
-												</div>
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<accordion >
+													<accordion-group is-open="funding_first.isFirstOpen" >
+														<accordion-heading is-open="funding_first.isFirstOpen" ng-class="{collapse:!funding_first.isFirstOpen}">
+														Financiamiento Tradicional <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': funding_first.isFirstOpen, 'glyphicon-chevron-right': !funding_first.isFirstOpen}"></i>
+														</accordion-heading>
+														<div class="row">
+															<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+																<p>Llamamos a estos mecanismos financieros tradicionales porque son utilizados en cualquier proyecto de financiamiento, no solamente en proyectos de desarrollo urbano o DOT. Dentro estos mecanismos identificamos a:</p>
+																<ul>
+																	<li><strong>La deuda pública</strong></li>
+																	<li><strong>La bursatilización</strong></li>
+																	<li><strong>Las APPs.</strong></li>
+																</ul>
+															</div>
+															<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+																<div class="tabs-img"> 
+																	<img ng-src="assets/tabbed-picture2.png" alt="">
+																</div>
+															</div>
+														</div>
+													</accordion-group>
+													<accordion-group is-open="funding_second.open">
+														<accordion-heading>
+														Financiamiento de Desarrollo Urbano <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': funding_second.open, 'glyphicon-chevron-right': !funding_second.open}"></i>
+														</accordion-heading>
+														<div class="row">
+															<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+																<p>Además de los mecanismos tradicionales existen mecanismos de financiamiento especiales de desarrollo urbano. La ventaja de éstos es que no requieren integrar varios tipos mecanismos al momento de implementarlos, sino que por sí solos atienden a las necesidades de obra urbana y, algunos, a obra urbana relacionada con el transporte. Los mecanismos identificados fueron:</p>
+																<ul>
+																	<li><strong>Las acciones de urbanización</strong></li>
+																	<li><strong>La transferencia de potencialidades</strong></li>
+																	<li><strong>Las Áreas de Desarrollo Económico (ADE)</strong></li>
+																</ul>
+															</div>
+															<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+																<div class="tabs-img"> 
+																	<img ng-src="assets/tabbed-picture2.png" alt="">
+																</div>
+															</div>
+														</div>
+													</accordion-group>
+												</accordion>
 											</div>
 										</div>
 									</tab>
@@ -321,7 +349,7 @@ Una de las principales fuentes de ingreso municipal es el impuesto predial. Son 
 	<div class="container">
 		<div class="row ">
 			<div class="text-center" style="margin-bottom:40px;">
-				<h3 style="color:#47c9af;margin:0 0 10px 0;">Caja de Herramientas</h3>
+				<h3 style="color:#008631;margin:0 0 10px 0;">Caja de Herramientas</h3>
 				<span style="color:#37474F;font-size:16px;">para el diseño e implementación de políticas y proyectos DOT</span>
 			</div>
 			<div class="col-lg-12">
@@ -433,7 +461,7 @@ Una de las principales fuentes de ingreso municipal es el impuesto predial. Son 
 		
 		<div class="select-city">
 			<ul class="nav nav-pills city" id="focus-city">
-			  <li class="active"><a id="cdmx">Ciudad de México</a></li>
+			  <li class="active"><a id="cdmx" class="dotmx_marker">Ciudad de México</a></li>
 			  <li><a id="gdl">Guadalajara</a></li>
 			  <li><a id="puebla">Puebla</a></li>
 			  <li><a id="mty">Monterrey</a></li>
