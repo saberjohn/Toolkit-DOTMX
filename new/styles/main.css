@@ -176,7 +176,7 @@
     height:75%;
 }
 .main .container .row{
-    background-color:#f5f5f5;
+    background-color:#ffffff;
     border-bottom: 1px solid #dadfe3;
     bottom: 0;
     left: 15px;
@@ -242,21 +242,23 @@
     30%  { top:10px; opacity: 1;}
     100% { top:25px; opacity: 0;}
 }
-.diagnostic,
+.project,
 .tools,
+.guide,
 .strategies,
 .model{
     height:100%;
     padding:30px 0 70px 0;
     position:relative;
 }
-.diagnostic,
+.project,
+.guide,
 .strategies{
-    background-color: #ffffff;
+    background-color: #f5f5f5;
 }
 .tools,
 .model{
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 .diag-menu{
     display: table;
@@ -460,10 +462,10 @@
     left: 0px !important;
 }*/
 .sidebar{
-    top:100px !important;
+    top:45px !important;
 }
 .leaflet-top.leaflet-left{
-    top:90px !important;
+    top:35px !important;
 }
 .sidebar-tabs > li.active{
     background-color: #32363e !important;
@@ -485,9 +487,10 @@
 .about{
     padding:60px 100px;
     display: block;
+    background-color: #f5f5f5;
 }
 .about p{
-    font-size: 20px;
+    font-size: 22px;
     color: #455A64;
     font-weight: 200;
 }
@@ -500,7 +503,18 @@
 }
 .team ul li i{
     color:#455A64;
+    cursor: pointer;
+
 }
-.team ul li i.twitter:hover{
-    color:#455A64;
+.team ul li i:before{
+    font-size: 30px;
+}
+.team ul li a{
+    text-decoration: none;
+}
+.team ul li a i.dotmx_twitter:hover{
+    color:#55acee;
+}
+.team ul li a i.dotmx_facebook:hover{
+    color:#31478E;
 }
