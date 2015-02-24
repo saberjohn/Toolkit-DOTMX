@@ -17,28 +17,23 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
-.dotmx_analyze:before {
-    content: "\e009";
-    font-size: 40px;
-}
-.dotmx_analyze2:before {
-    content: "\e00d";
-    font-size: 40px;
-}
 .dotmx_analyze3:before {
     content: "\e000";
     font-size: 70px;
     color:#455A64;
 }
-.dotmx_analyze4:before {
-    content: "\e002";
-    font-size: 40px;
-}
 .dotmx_arrow_up:before {
     content: "\e001";
 }
+.dotmx_analyze4:before {
+    content: "\e002";
+    font-size: 70px;
+    color:#455A64;
+}
 .dotmx_analyze1:before {
     content: "\e003";
+    font-size: 70px;
+    color:#455A64;
 }
 .dotmx_down:before {
     content: "\e004";
@@ -51,18 +46,23 @@
     font-size: 13px;
     margin-right: 5px;
 }
-.dotmx_search:before {
+.dotmx_facebook:before {
+    content: "\e006";
+}
+.dotmx_search2:before {
     content: "\e007";
     font-size: 70px;
     color:#455A64;
 }
-.dotmx_search1:before {
+.dotmx_search:before {
     content: "\e008";
-    font-size: 40px;
+    font-size: 70px;
+    color:#455A64;
 }
-.dotmx_search2:before {
-    content: "\e006";
-    font-size: 40px;
+.dotmx_analyze:before {
+    content: "\e009";
+    font-size: 70px;
+    color:#455A64;
 }
 .dotmx_transport2:before {
     content: "\e00a";
@@ -76,11 +76,19 @@
     font-size: 13px;
     margin-right: 5px;
 }
-.dotmx_transport:before {
+.dotmx_twitter:before {
     content: "\e00c";
+}
+.dotmx_transport:before {
+    content: "\e00d";
     color:#70C1B7;
     font-size: 13px;
     margin-right: 5px;
+}
+.dotmx_analyze2:before {
+    content: "\e00e";
+    font-size: 70px;
+    color:#455A64;
 }
 
 .d-header{
@@ -473,4 +481,26 @@
     -o-transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
     transition: all 0.25s linear;
+}
+.about{
+    padding:60px 100px;
+    display: block;
+}
+.about p{
+    font-size: 20px;
+    color: #455A64;
+    font-weight: 200;
+}
+.team h4{
+    color:#424242;
+}
+.team ul li{
+    display: inline-block;
+    padding:5px;
+}
+.team ul li i{
+    color:#455A64;
+}
+.team ul li i.twitter:hover{
+    color:#455A64;
 }
