@@ -232,15 +232,19 @@
     100% { top:25px; opacity: 0;}
 }
 .diagnostic,
-.tools{
+.tools,
+.strategies,
+.model{
     height:100%;
     padding:30px 0 70px 0;
     position:relative;
 }
-.diagnostic{
+.diagnostic,
+.strategies{
     background-color: #ffffff;
 }
-.tools{
+.tools,
+.model{
     background-color: #f5f5f5;
 }
 .diag-menu{
