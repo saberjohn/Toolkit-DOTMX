@@ -115,6 +115,9 @@
 .navbar-nav{
     float:right !important;
 }
+.navbar-nav >li{
+    margin:5px 0 !important;
+}
 .navbar-header a img{
     margin:3px 0;
 }
