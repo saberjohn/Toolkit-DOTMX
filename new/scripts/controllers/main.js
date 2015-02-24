@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
-    $scope.first = {
+    $scope.fiscal_first = {
+		isFirstOpen: true
+    };
+    $scope.funding_first = {
 		isFirstOpen: true
     };
     
@@ -21,21 +24,24 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	
 	$("#focus-city > li > a").click( function() {
 		$("#focus-city > li").removeClass("active");
+		$("#focus-city > li>a").removeClass("dotmx_marker");
+
 		$(this).parent().addClass("active");
+		$(this).addClass("dotmx_marker");
 		
 		var city = $(this).attr("id");
 		
 		if(city == "cdmx") {
 			print(estaciones_zmvm, lineas_zmvm, city);
-			map.setView([19.432711775616433, -99.13325428962708], 13);
+			map.setView([19.432711775616433, -99.13325428962708], 12);
 		} else if(city == "puebla") {
 			print(estaciones_puebla, lineas_puebla, city);
 			map.setView([19.044918668412617, -98.20747375488281], 13);
 		} else if(city == "gdl") {
-			print(estaciones_gdl, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_gdl, lineas_gdl, city); //cambiar las lineas
 			map.setView([20.674929132304698, -103.35479378700256], 13);
 		} else if(city == "mty") {
-			print(estaciones_mty, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_mty, lineas_mty, city); //cambiar las lineas
 			map.setView([25.68713198895331, -100.33032417297363], 13);
 		} else if(city == "juarez") {
 			print(estaciones_juarez, lineas_juarez, city);
@@ -47,16 +53,16 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			print(estaciones_chihuahua, lineas_chihuahua, city);
 			map.setView([28.642690467330326, -106.08458518981934], 13);
 		} else if(city == "aguas") {
-			print(estaciones_aguas, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_aguas, lineas_aguas, city); //cambiar las lineas
 			map.setView([21.876951611919733, -102.3012113571167], 13);
 		} else if(city == "pachuca") {
-			print(estaciones_pachuca, lineas_chihuahua, city); //cambiar las lineas
+			print(estaciones_pachuca, lineas_pachuca, city); //cambiar las lineas
 			map.setView([20.117114283545682, -98.74726295471191], 13);
 		}				
 	});
 	
 	L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
-	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 14);
+	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 13);
 	
 	var circleLayer		= new L.LayerGroup();
 	var estacionesLayer	= new L.LayerGroup();
@@ -67,7 +73,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 	
 	var geojsonMarkerOptions = {
 		radius: 10,
-		fillColor: "#47c9af",
+		fillColor: "#008631",
 		color: "#fff",
 		stroke: "#fff",
 		weight: 2,
@@ -130,10 +136,12 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 				});
 				
 				$("#focus-agency > li > a").click( function () {
-					if($(this).hasClass("active-agency")) {
+					if($(this).hasClass("active-agency") && $(this).hasClass("dotmx_transport")) {
 						$(this).removeClass("active-agency");
+						$(this).removeClass("dotmx_transport");
 					} else {
 						$(this).addClass("active-agency");
+						$(this).addClass("dotmx_transport");
 					}
 					print(estaciones, lineas, ciudad, true);
 				});
@@ -160,6 +168,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			var estacionesGeo = L.geoJson(estaciones, {
 				filter: function (feature, layer) {
 					if(agenciesSelect.indexOf(feature.properties.Agencia) != -1) return feature.properties;
+					
 					return false;
 				},
 				onEachFeature: onEachFeature,
@@ -185,7 +194,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			layer.on('click', function(e) {
 				estacionesGeo.setStyle({
 					radius: 10,
-					fillColor: "#47c9af",
+					fillColor: "#008631",
 					color: "#fff",
 					stroke: "#fff",
 					weight: 2,
