@@ -136,7 +136,6 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 				});
 				
 				$("#focus-agency > li > a").click( function () {
-					console.log(this.text);
 					if($(this).hasClass("active-agency") && $(this).hasClass("dotmx_transport")) {
 						$(this).removeClass("active-agency");
 						$(this).removeClass("dotmx_transport");
@@ -169,6 +168,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			var estacionesGeo = L.geoJson(estaciones, {
 				filter: function (feature, layer) {
 					if(agenciesSelect.indexOf(feature.properties.Agencia) != -1) return feature.properties;
+					
 					return false;
 				},
 				onEachFeature: onEachFeature,
