@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
+angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$modal) {
     $scope.fiscal_first = {
 		isFirstOpen: true
     };
@@ -34,6 +34,19 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
     $scope.pach_first = {
 		isFirstOpen: true
     };
+    $scope.openTools = function(){
+	    var modalInstance = $modal.open({
+	      templateUrl: 'views/tools_modal.html',
+	      size: 'lg',
+	      controller:ToolsController
+	    });
+    };
+    var ToolsController = function($scope,$modalInstance){
+	  	$scope.cerrar = function(){
+			$modalInstance.close();
+		}
+    }
+
 
 	$document.on('scroll', function() {
 		var topPosition = angular.element(document.getElementById('topcontrol'));
