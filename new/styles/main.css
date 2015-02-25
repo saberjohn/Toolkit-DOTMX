@@ -17,79 +17,108 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
-.dotmx_analyze3:before {
+.dotmx_pdf:before {
     content: "\e000";
-    font-size: 70px;
-    color:#455A64;
 }
-.dotmx_arrow_up:before {
+.dotmx_analyze3:before {
     content: "\e001";
 }
-.dotmx_analyze4:before {
+.dotmx_arrow_up:before {
     content: "\e002";
-    font-size: 70px;
-    color:#455A64;
+}
+.dotmx_analyze4:before {
+    content: "\e003";
 }
 .dotmx_analyze1:before {
-    content: "\e003";
-    font-size: 70px;
-    color:#455A64;
+    content: "\e004";
 }
 .dotmx_down:before {
-    content: "\e004";
+    content: "\e005";
+}
+.dotmx_excel:before {
+    content: "\e006";
+}
+.dotmx_marker:before {
+    content: "\e007";
+}
+.dotmx_facebook:before {
+    content: "\e008";
+}
+.dotmx_search2:before {
+    content: "\e009";
+}
+.dotmx_search:before {
+    content: "\e00a";
+}
+.dotmx_pdf2:before {
+    content: "\e00b";
+}
+.dotmx_analyze:before {
+    content: "\e00c";
+}
+.dotmx_transport2:before {
+    content: "\e00d";
+}
+.dotmx_transport21:before {
+    content: "\e00e";
+}
+.dotmx_twitter:before {
+    content: "\e00f";
+}
+.dotmx_transport:before {
+    content: "\e010";
+}
+.dotmx_analyze2:before {
+    content: "\e011";
+}
+.dotmx_excel2:before {
+    content: "\e012";
+}
+
+
+
+
+.dotmx_down:before {
     font-size: 30px;
     color:#455A64;
 }
 .dotmx_marker:before {
-    content: "\e005";
-    color:#70C1B7;
-    font-size: 13px;
-    margin-right: 5px;
-}
-.dotmx_facebook:before {
-    content: "\e006";
-}
-.dotmx_search2:before {
-    content: "\e007";
-    font-size: 70px;
-    color:#455A64;
-}
-.dotmx_search:before {
-    content: "\e008";
-    font-size: 70px;
-    color:#455A64;
-}
-.dotmx_analyze:before {
-    content: "\e009";
-    font-size: 70px;
-    color:#455A64;
-}
-.dotmx_transport2:before {
-    content: "\e00a";
-    color:#70C1B7;
-    font-size: 13px;
-    margin-right: 5px;
-}
-.dotmx_transport21:before {
-    content: "\e00b";
     color:#70C1B7;
     font-size: 13px;
     margin-right: 5px;
 }
 .dotmx_twitter:before {
-    content: "\e00c";
+    color:#455A64;
 }
+.dotmx_facebook:before {
+    color:#455A64;
+}
+.dotmx_analyze1:before,
+.dotmx_analyze:before,
+.dotmx_analyze2:before,
+.dotmx_analyze3:before,
+.dotmx_analyze4:before,
+.dotmx_search:before,
+.dotmx_search2:before,
+.dotmx_excel:before,
+.dotmx_excel2:before,
+.dotmx_pdf:before,
+.dotmx_pdf2:before{
+    font-size: 70px;
+    color:#455A64;
+}
+.dotmx_transport2:before,
+.dotmx_transport21:before,
 .dotmx_transport:before {
-    content: "\e00d";
     color:#70C1B7;
     font-size: 13px;
     margin-right: 5px;
 }
-.dotmx_analyze2:before {
-    content: "\e00e";
-    font-size: 70px;
-    color:#455A64;
-}
+
+
+
+
+
 
 .d-header{
     background-color: transparent;
@@ -470,13 +499,13 @@
 .sidebar-tabs > li.active{
     background-color: #32363e !important;
 }
-.toolkit >div{
+.downloads >div{
     cursor: pointer;
 }
-.toolkit >div > p{
+.downloads >div > p{
     font-size: 20px !important;
 }
-.toolkit >div:hover i:before{
+.downloads >div:hover i:before{
     color:#009688;
     -moz-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
@@ -512,9 +541,17 @@
 .team ul li a{
     text-decoration: none;
 }
-.team ul li a i.dotmx_twitter:hover{
+.team ul li a i.dotmx_twitter:hover:before{
     color:#55acee;
 }
-.team ul li a i.dotmx_facebook:hover{
+.team ul li a i.dotmx_facebook:hover:before{
     color:#31478E;
+}
+.nav-tabs>li.documents.active>a,
+.nav-tabs>li.documents>a:hover,
+.nav-tabs>li.documents.active>a:focus a{
+    background-color: #0C1012 !important;
+}
+.documents>.panel-heading{
+    background-color: #0C1012 !important;   
 }
