@@ -7,7 +7,34 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
     $scope.funding_first = {
 		isFirstOpen: true
     };
-    
+    $scope.mx_first = {
+		isFirstOpen: true
+    };
+    $scope.gdl_first = {
+		isFirstOpen: true
+    };
+    $scope.pue_first = {
+		isFirstOpen: true
+    };
+    $scope.mty_first = {
+		isFirstOpen: true
+    };
+    $scope.jrz_first = {
+		isFirstOpen: true
+    };
+    $scope.ln_first = {
+		isFirstOpen: true
+    };
+    $scope.chi_first = {
+		isFirstOpen: true
+    };
+    $scope.ags_first = {
+		isFirstOpen: true
+    };
+    $scope.pach_first = {
+		isFirstOpen: true
+    };
+
 	$document.on('scroll', function() {
 		var topPosition = angular.element(document.getElementById('topcontrol'));
 		var topHeader = angular.element(document.getElementsByClassName('d-header'));
@@ -20,7 +47,6 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document) {
 			topHeader.removeClass('black');
 		}
 	});
-	
 	
 	$("#focus-city > li > a").click( function() {
 		$("#focus-city > li").removeClass("active");
