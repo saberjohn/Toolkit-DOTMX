@@ -479,13 +479,16 @@
 .sidebar-tabs > li.active{
     background-color: #32363e !important;
 }
-.downloads >div{
+.downloads > a >div{
     cursor: pointer;
 }
-.downloads >div > p{
+.downloads > a >div > p{
     font-size: 20px !important;
 }
-.downloads >div:hover i:before{
+.downloads > a >div >h4{
+    color:initial;
+}
+.downloads > a >div:hover i:before{
     color:#009688;
     -moz-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
