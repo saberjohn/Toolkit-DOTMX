@@ -535,3 +535,15 @@
 .documents>.panel-heading{
     background-color: #0C1012 !important;   
 }
+.modal{
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-dialog.modal-lg{
+    margin:100px auto !important;
+}
+.close{
+    font-size: 30px !important;
+}
+.modal-header{
+    border:none !important;
+}
