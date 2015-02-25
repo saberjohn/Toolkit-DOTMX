@@ -6,8 +6,7 @@
 		'ngSanitize',
 		'ui.router',
 		'ui.bootstrap',
-		'duScroll',
-		'angularHideHeader'
+		'duScroll'
 	]).value('duScrollDuration', 750)
 	.run(["$rootScope", "$state", "$stateParams",function ($rootScope, $state, $stateParams) {
 		$rootScope.$state = $state;
