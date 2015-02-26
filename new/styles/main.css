@@ -178,18 +178,18 @@
 }
 .main p{
     font-size: 18px;
-    margin:0 0 50px;
+    margin:0 0 30px;
 }
 .main .container{
     display:table;
-    height:75%;
+    height:61%;
 }
 .main .container .row{
     background-color:#ffffff;
     border-bottom: 1px solid #dadfe3;
     bottom: 0;
     left: 15px;
-    padding:20px 0 0 0;
+    padding:0;
     position: absolute;
     right: 15px;
     text-align:center;
