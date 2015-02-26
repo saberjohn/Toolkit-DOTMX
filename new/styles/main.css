@@ -172,9 +172,9 @@
     position: relative;
     color:#ffffff;
 }
-.main h2{
+.main h1{
     letter-spacing: 3px;
-    margin:20px auto;
+    margin:20px 100px;
 }
 .main p{
     font-size: 18px;
