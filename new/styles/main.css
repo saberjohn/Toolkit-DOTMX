@@ -334,7 +334,7 @@
 
 .new-tabs>ul{
     display: table-cell;
-    width: 210px;
+    width: 300px;
     vertical-align: top;
     /*border-right: 1px solid #008631;*/
     border-bottom: none !important;
@@ -386,7 +386,7 @@
     color:#455A64;
     font-size: 16px;
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 .tabs-img{
     position: relative;
@@ -440,7 +440,7 @@
     background-color: #fafafa;
 }
 .panel-body p{
-    line-height: 1.5 !important;
+    line-height: 1.75 !important;
     color:#505c70;
 }
 
