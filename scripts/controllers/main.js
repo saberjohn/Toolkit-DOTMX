@@ -114,6 +114,8 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
 		}				
 	});
 	
+	var agencies = new Array();
+	
 	$(document).ready( function() {
 		L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
 		var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 13);
@@ -153,7 +155,6 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
 			"opacity": 0.65
 		};
 		
-		var agencies = new Array();
 		print(estaciones_zmvm, lineas_zmvm, "cdmx");
 	});
 	
