@@ -36,12 +36,19 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
     };
     $scope.openTools = function(){
 	    var modalInstance = $modal.open({
-	      templateUrl: 'views/tools_modal.html',
+	      templateUrl: 'views/modals/tools_modal.html',
 	      size: 'lg',
-	      controller:ToolsController
+	      controller:ModalsController
 	    });
     };
-    var ToolsController = function($scope,$modalInstance){
+    $scope.openModel = function(){
+	    var modalInstance = $modal.open({
+	      templateUrl: 'views/modals/model_modal.html',
+	      size: 'lg',
+	      controller:ModalsController
+	    });
+    };
+    var ModalsController = function($scope,$modalInstance){
 	  	$scope.cerrar = function(){
 			$modalInstance.close();
 		}
