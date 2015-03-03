@@ -301,11 +301,27 @@
     margin: 0 auto;
     float:right;
 }
+.select-agency>ul>h4{
+    background-color:#ffffff;
+    margin:0;
+    padding:8px;
+    position:relative;
+    text-align:center;
+    width:200px;
+    margin-left: 2px !important;
+    margin-right: 0 !important;
+}
 .select-agency>ul>li{
     float: none !important;
     margin-bottom: 5px;
     width: 200px;
 }
+
+.select-agency>ul>li:nth-child(2){
+    margin-left: 2px !important;
+    margin-right: 0 !important;
+}
+
 .select-agency>ul>li.active>a,
 .select-agency>ul>li.active>a:hover,
 .select-agency>ul>li.active>a:focus,
