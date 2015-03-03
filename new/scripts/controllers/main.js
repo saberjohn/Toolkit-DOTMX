@@ -48,6 +48,13 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
 	      controller:ModalsController
 	    });
     };
+    $scope.openGuide = function(){
+	    var modalInstance = $modal.open({
+	      templateUrl: 'views/modals/guide_modal.html',
+	      size: 'lg',
+	      controller:ModalsController
+	    });
+    };
     var ModalsController = function($scope,$modalInstance){
 	  	$scope.cerrar = function(){
 			$modalInstance.close();
