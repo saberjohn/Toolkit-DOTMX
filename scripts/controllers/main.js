@@ -114,46 +114,48 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
 		}				
 	});
 	
-	L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
-	var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 13);
-	
-	var circleLayer		= new L.LayerGroup();
-	var estacionesLayer	= new L.LayerGroup();
-	var lineasLayer 	= new L.LayerGroup();
-	
-	//Sidebar
-	var sidebar = L.control.sidebar('sidebar').addTo(map);
-	
-	var geojsonMarkerOptions = {
-		radius: 10,
-		fillColor: "#008631",
-		color: "#fff",
-		stroke: "#fff",
-		weight: 2,
-		dashArray: '2',
-		opacity: 1,
-		fillOpacity: 0.8
-	};
-	
-	var geojsonMarkerOptions2 = {
-		radius: 30,
-		fillColor: "#5EAF84",
-		color: "#fff",
-		stroke: "#fff",
-		weight: 2,
-		dashArray: '2',
-		opacity: 1,
-		fillOpacity: 0.5
-	};
-	
-	var lineStyle = {
-		"color": "#ff7800",
-		"weight": 5,
-		"opacity": 0.65
-	};
-	
-	var agencies = new Array();
-	print(estaciones_zmvm, lineas_zmvm, "cdmx");
+	$(document).ready( function() {
+		L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
+		var map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:false}).setView([19.432711775616433, -99.13325428962708], 13);
+		
+		var circleLayer		= new L.LayerGroup();
+		var estacionesLayer	= new L.LayerGroup();
+		var lineasLayer 	= new L.LayerGroup();
+		
+		//Sidebar
+		var sidebar = L.control.sidebar('sidebar').addTo(map);
+		
+		var geojsonMarkerOptions = {
+			radius: 10,
+			fillColor: "#008631",
+			color: "#fff",
+			stroke: "#fff",
+			weight: 2,
+			dashArray: '2',
+			opacity: 1,
+			fillOpacity: 0.8
+		};
+		
+		var geojsonMarkerOptions2 = {
+			radius: 30,
+			fillColor: "#5EAF84",
+			color: "#fff",
+			stroke: "#fff",
+			weight: 2,
+			dashArray: '2',
+			opacity: 1,
+			fillOpacity: 0.5
+		};
+		
+		var lineStyle = {
+			"color": "#ff7800",
+			"weight": 5,
+			"opacity": 0.65
+		};
+		
+		var agencies = new Array();
+		print(estaciones_zmvm, lineas_zmvm, "cdmx");
+	});
 	
 	function print(estaciones, lineas, ciudad, filter) {
 		agencies = new Array();
