@@ -531,8 +531,12 @@
 .team h4{
     color:#424242;
 }
-.team ul li{
+.team ul{
     display: inline-block;
+}
+.team ul li{
+    display: block;
+    text-align: left; 
     padding:5px;
 }
 .team ul li i{
@@ -542,9 +546,13 @@
 }
 .team ul li i:before{
     font-size: 30px;
+    margin-right: 5px;  
 }
 .team ul li a{
     text-decoration: none;
+}
+.team ul li a:hover i:before{
+    color:#55acee !important;
 }
 .team ul li a i.dotmx_twitter:hover:before{
     color:#55acee;
