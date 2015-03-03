@@ -184,6 +184,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
 			/*Agencias*/
 			$("#focus-agency").html("");
 			if(agencies.length > 1) {
+				$("#focus-agency").append('<h4>Medios de Transporte</h4>');
 				agencies.forEach(function(entry) {
 					$("#focus-agency").append('<li><a id="' + entry + '">' + entry +'</a></li>');
 				});
