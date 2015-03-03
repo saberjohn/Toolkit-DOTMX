@@ -1,7 +1,6 @@
 	'use strict';
 
 	angular.module('dotmxApp', [
-		'ngCookies',
 		'ngResource',
 		'ngSanitize',
 		'ui.router',
