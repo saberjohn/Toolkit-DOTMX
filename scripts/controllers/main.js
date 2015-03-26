@@ -325,7 +325,7 @@ angular.module('dotmxApp').controller('MainCtrl', function ($scope,$document,$mo
 				$("#info-VivTodServ").html(feature.properties.VivTodServ);
 				$("#info-PobOcupada").html(feature.properties.PobOcupada);
 				$("#info-PobDesocup").html(feature.properties.PobDesocup);
-				$("#info-DensPobAvg").html(feature.properties.DensPobAvg);
+				$("#info-DensPobAvg").html(feature.properties.DensPob);
 				
 				circleLayer.addLayer(circle);
 				circleLayer.addTo(map);
